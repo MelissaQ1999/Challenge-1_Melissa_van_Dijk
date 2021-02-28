@@ -27,6 +27,7 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+
 // Script for bar chart of resources overview
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -47,7 +48,7 @@ var myChart = new Chart(ctx, {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
