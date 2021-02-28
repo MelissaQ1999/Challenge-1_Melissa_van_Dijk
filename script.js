@@ -36,7 +36,7 @@ var myChart = new Chart(ctx, {
         // This sets the data for the x-as
         labels: ['Fuel', 'Water', 'Energy'],
         datasets: [{
-            label: '',
+            // label: '',
             data: [12, 19, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

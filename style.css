@@ -24,12 +24,12 @@
 }
 
 /* To remove default generated style */
-* {
+/* * {
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
-}
+} */
 
 /* General code */
 body {
@@ -39,7 +39,6 @@ body {
 /* Applying the font */
 h1 {
     font-family: 'GothamBold', Helvetica, sans-serif;
-    color: #FFFFFF;
 }
 
 /* SpaceX logo */
