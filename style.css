@@ -17,10 +17,10 @@
     font-display: swap;
 }
 
-/* The head colours */
+/* The head colors */
 :root {
-    --primary: #ED5338;
-    --secondary: #321119;
+    --primary: #321119;
+    --secondary: #ED5338;
 }
 
 /* To remove default generated style */
@@ -38,7 +38,19 @@ body {
 
 /* Applying the font */
 h1 {
-    font-family: 'GothamBold', Helvetica, sans-serif;
+    font-family: "GothamBold", Helvetica, sans-serif;
+    color: var(--primary);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+p {
+    font-family: "GothamLight", Helvetica, sans-serif;
+    color: var(--secondary);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
 }
 
 /* SpaceX logo */

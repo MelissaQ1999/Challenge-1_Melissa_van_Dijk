@@ -17,20 +17,23 @@
 
             <!-- Countdown "Welcome to Mars" -->
             <section class="data-1">
-                <h1 class="countdown">The estimated time of arrival</h1>
-                <p id="demo"></p>
+                <h1>The estimated time of arrival</h1>
+                <p id="countdown"></p>
             </section>
 
             <!-- Graph of distance traveled over time -->
             <section class="data-2">
-                <h1 class="distance">Distance traveled over time</h1>
+                <h1>Distance traveled over time</h1>
+                <div class="chart">
+                    <canvas id="distance" width="400" height="300"></canvas>
+                </div>
             </section>
 
             <!-- Bar chart of resources overview -->
             <section class="data-3">
-                <h1 class="resources">Resources overview</h1>
+                <h1>Resources overview</h1>
                 <div class="chart">
-                    <canvas id="myChart" width="400" height="300"></canvas>
+                    <canvas id="resources" width="400" height="300"></canvas>
                 </div>
             </section>
         </main>
