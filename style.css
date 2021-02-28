@@ -1,0 +1,81 @@
+/* The font I use (for personal use only) */
+@font-face {
+    font-family: 'GothamBold';
+    src: url('fonts/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
+         url('fonts/GothamBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('fonts/Gotham-Light.woff') format('woff'), /* Modern Browsers */
+         url('fonts/GothamLight.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* The head colours */
+:root {
+    --primary: #ED5338;
+    --secondary: #321119;
+}
+
+/* To remove default generated style */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* General code */
+body {
+    background-color: #121212;
+}
+
+/* Applying the font */
+h1 {
+    font-family: 'GothamBold', Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+/* SpaceX logo */
+.logo {
+    max-width: 250px;
+	max-height: 35px;
+    width: 50%;
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* main */
+.dashboard {
+    display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-row-gap: 15px;
+	grid-auto-rows: auto auto;
+	padding-top: 32px;
+}
+
+.data-1, .data-2, .data-3 {
+    grid-column: 2 / span 10;
+}
+
+section {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.chart {
+    position: relative;
+    /* width: 45vw; */
+    margin: 10px;
+}
+
+canvas {
+    border: 2px solid var(--primary);
+}

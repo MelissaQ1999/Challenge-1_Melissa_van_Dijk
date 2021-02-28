@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challencee 1 - SpaceX</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" defer></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="images/SpaceX_Logo_White.png" alt="SpaceX logo" class ="logo">
+        </header>
+        <main class="dashboard">
+
+            <!-- Countdown "Welcome to Mars" -->
+            <section class="data-1">
+                <h1 class="countdown">The estimated time of arrival</h1>
+            </section>
+
+            <!-- Graph of distance traveled over time -->
+            <section class="data-2">
+                <h1 class="distance">Distance traveled over time</h1>
+            </section>
+
+            <!-- Bar chart of resources overview -->
+            <section class="data-3">
+                <h1 class="resources">Resources overview</h1>
+                <div class="chart">
+                    <canvas id="myChart" width="400" height="300"></canvas>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
