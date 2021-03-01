@@ -34,13 +34,14 @@
 /* General code */
 body {
     background-color: #121212;
+    padding: 15px;
 }
 
 /* Applying the font */
 h1 {
     font-family: "GothamBold", Helvetica, sans-serif;
     color: var(--primary);
-    font-size: 22px;
+    font-size: 23px;
     line-height: 24px;
     margin-left: 10px;
     margin-right: 10px;
@@ -61,7 +62,6 @@ p {
 	max-height: 35px;
     width: 50%;
     display: block;
-    margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -80,7 +80,7 @@ p {
 
 /* Applying the grid */
 .data-1, .data-2, .data-3 {
-    grid-column: 2 / span 10;
+    grid-column: 1 / span 12;
 }
 
 section {
@@ -100,7 +100,7 @@ section {
     color: #86754E;
     font-family: "GothamBold", Helvetica, sans-serif;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 15px;
     padding: 5px;
 }
 
@@ -108,4 +108,27 @@ section {
 .chart {
     position: relative;
     margin: 0 10px 10px 10px;
+}
+
+
+/* The breakpoints */
+
+/* Intermediate version of mobile and tablet */
+@media (min-width: 450px) {
+
+}
+
+/* Tablet version (768PX) */
+@media (min-width: 768PX) {
+    
+}
+
+/* Laptop version (1024 PX) */
+@media (min-width: 1024 PX) {
+    
+}
+
+/* Desktop version (1920PX) */
+@media (min-width: 1920PX) {
+    
 }

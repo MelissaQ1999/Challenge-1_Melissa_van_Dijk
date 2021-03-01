@@ -99,7 +99,7 @@ var resources = new Chart(ctx, {
     data: {
         labels: ['Fuel', 'Water', 'Energy'],// This sets the data for the x-as
         datasets: [{
-            data: [85, 62, 77], // This determines the data displayed in the bar chart
+            data: [85, 62, 97], // This determines the data displayed in the bar chart
             backgroundColor: [ // This sets the fill color
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
