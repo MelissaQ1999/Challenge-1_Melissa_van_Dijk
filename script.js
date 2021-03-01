@@ -84,6 +84,7 @@ var distance = new Chart(ctx, {
         title: {
             display: true,
             text: 'Distance in km (x 1000)',
+            fontSize: 14,
         },
         legend: {
             display: false
@@ -129,6 +130,7 @@ var resources = new Chart(ctx, {
         title: {
             display: true,
             text: 'The resources are presented in %',
+            fontSize: 14,
         },
         legend: {
             display: false
