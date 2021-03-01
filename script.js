@@ -102,20 +102,20 @@ var resources = new Chart(ctx, {
         datasets: [{
             data: [85, 62, 97], // This determines the data displayed in the bar chart
             backgroundColor: [ // This sets the fill color
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
+                'rgba(255, 50, 50, 0.2)',
+                'rgba(54, 162, 255, 0.2)',
+                'rgba(255, 216, 86, 0.2)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
+                'rgba(255, 50, 50, 1)',
+                'rgba(54, 162, 255, 1)',
+                'rgba(255, 216, 86, 1)'
             ],
             borderWidth: 3,
             hoverBackgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
+                'rgba(255, 50, 50, 1)',
+                'rgba(54, 162, 255, 1)',
+                'rgba(255, 216, 86, 1)'
             ],
         }]
     },
@@ -137,3 +137,23 @@ var resources = new Chart(ctx, {
         }
     }
 });
+
+
+//Script for the toggle switch Mars vs Earth
+  function marsEarthH2() {
+    var x = document.getElementById("marsEarthH2");
+    if (x.innerHTML === "Mars") {
+      x.innerHTML = "Earth";
+    } else {
+      x.innerHTML = "Mars";
+    }
+  }
+  
+  function marsEarthP() {
+    var x = document.getElementById("marsEarthP");
+    if (x.innerHTML === "55 844 564 million km") {
+      x.innerHTML = "155 436 thousand km";
+    } else {
+      x.innerHTML = "55 844 564 million km";
+    }
+  }

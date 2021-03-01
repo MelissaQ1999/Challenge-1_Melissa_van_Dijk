@@ -45,10 +45,32 @@ h1 {
     line-height: 24px;
 }
 
+h2 {
+    font-family: "GothamLight", Helvetica, sans-serif;
+    color: var(--primary);
+    font-size: 23px;
+    line-height: 24px;
+    margin-left: 75px;
+    margin-top: -19px;
+}
+
 p {
     font-family: "GothamLight", Helvetica, sans-serif;
     color: var(--secondary);
     text-align: center;
+}
+
+.countdown {
+    font-size: 24px;
+}
+
+.marsEarthP {
+    font-family: "GothamLight", Helvetica, sans-serif;
+    color: var(--secondary);
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 35px;
 }
 
 
@@ -72,12 +94,13 @@ p {
     display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-row-gap: 15px;
-	grid-auto-rows: auto auto;
+    grid-auto-rows: auto auto;
+    grid-auto-columns: auto auto;
 	padding-top: 30px;
 }
 
 /* Applying the grid */
-.data-1, .data-2, .data-3 {
+.data-1, .data-2, .data-3, .data-4 {
     grid-column: 1 / span 12;
 }
 
@@ -109,12 +132,85 @@ section {
 }
 
 
+/* The toggle switch*/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #C1440E;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    top: 2px;
+    left: 4px;
+    bottom: 2px;
+    right: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #0EC0A6;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
 /* The breakpoints */
 
 /* Intermediate version of mobile and tablet (450px) */
 @media (min-width: 450px) {
-    h1 {
+    h1, h2 {
         font-size: 160%;
+    }
+
+    .countdown {
+        margin-top: 35px;
+    }
+
+    .marsEarthP {
+        font-size: 20px;
+    }
+
+    .dashboard {
+        grid-row-gap: 20px;
     }
 
     section {
@@ -129,8 +225,32 @@ section {
         padding-right: 30px;
     }
 
+    h1 {
+        line-height: 28px;
+    }
+
+    .data-1 {
+        grid-column: 1 / span 8;
+    }
+
+    .data-4 {
+        grid-column: 9 / span 4;
+        grid-row-start: 1;
+    }
+
+    .countdown {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 38px;
+    }
+
     .dashboard {
-        grid-row-gap: 30px;
+        grid-gap: 30px;
+    }
+
+    .marsEarthP {
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 
     section {
@@ -149,12 +269,32 @@ section {
         padding-right: 80px;
     }
 
-    .dashboard {
-        grid-gap: 30px;
+    h1 {
+        font-size: 200%;
+        line-height: 40px;
+        text-align: center;
     }
 
-    .data-1 {
-        grid-column: 1 / span 12;
+    h2 {
+        margin-left: 55%;
+    }
+
+    .marsEarthP {
+        font-size: 22px;
+    }
+
+    .countdown {
+        margin-top: 65px;
+        margin-bottom: 45px;
+        font-size: 48px;
+    }
+
+    label {
+        margin-left: 20%;
+    }
+
+    .dashboard {
+        grid-gap: 35px;
     }
 
     .data-2 {
@@ -165,12 +305,64 @@ section {
         grid-column: 7 / span 6;
     }
 
+    .numbers {
+        font-size: 28px;
+    }
+
     .days, .hours, .minutes, .seconds {
         font-size: 14px;
     }
 }
 
+/* Intermediate version of laptop and desktop (1280px) */
+@media (min-width: 1280PX) {
+    h1 {
+        font-size: 224%;
+    }
+
+    h2 {
+        margin-left: 50%;
+    }
+
+    label {
+        margin-left: 25%;
+    }
+
+    section {
+        padding: 30px;
+    }
+}
+
 /* Desktop version (1920px) */
 @media (min-width: 1920PX) {
+    body {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
 
+    .dashboard {
+        grid-gap: 45px;
+        margin-left: auto;
+		margin-right: auto;
+		max-width: 2560px;
+    }
+
+    h1 {
+        font-size: 300%;
+        text-align: center;
+    }
+
+    .countdown {
+        margin-top: 75px;
+        margin-bottom: 45px;
+        font-size: 52px;
+    }
+
+    section {
+        padding: 45px;
+    }
+
+    .numbers {
+        font-size: 38px;
+    }
 }
