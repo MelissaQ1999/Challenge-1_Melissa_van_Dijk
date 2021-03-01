@@ -17,20 +17,29 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="countdown"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML =
+    "<div class=\"days\"> \
+        <div class=\"numbers\">" + days + "</div>Days</div> \
+    <div class=\"hours\"> \
+        <div class=\"numbers\">" + hours + "</div>Hours</div> \
+    <div class=\"minutes\"> \
+        <div class=\"numbers\">" + minutes + "</div>Minutes</div> \
+    <div class=\"seconds\"> \
+        <div class=\"numbers\">" + seconds + "</div>Seconds</div> \
+    </div>";
 
   // When the countdown is on the date, they shoul have arrived and this text will appear
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "Welcome to Mars";
   }
-}, 1000);
+}, 250);
 
 
-// Sets the fonts of the charts
+// Sets the font and font color of the charts
 Chart .defaults.global.defaultFontFamily = ' "GothamBold", Helvetica, sans-serif';
+Chart .defaults.global.defaultFontColor = 'rgba(134, 117, 78)';
 
 // Script for graph of distance traveled over time
 var ctx = document.getElementById('distance').getContext('2d');
@@ -39,8 +48,11 @@ var distance = new Chart(ctx, {
     data: {
         labels: ['1 hr', '2 hr', '3 hr', '4 hr', '5 hr', '6 hr'],// This sets the data for the x-as
         datasets: [{
-            data: [85, 62, 77], // This determines the data displayed in the graph
+            data: [18.9, 46.54, 75.902, 87.1, 126.269, 155.436], // This determines the data displayed in the graph
             backgroundColor: [ // This sets the fill color
+                'rgba(237, 83, 56, 0.3)',
+                'rgba(237, 83, 56, 0.3)',
+                'rgba(237, 83, 56, 0.3)',
                 'rgba(237, 83, 56, 0.3)',
                 'rgba(237, 83, 56, 0.3)',
                 'rgba(237, 83, 56, 0.3)'
@@ -48,9 +60,13 @@ var distance = new Chart(ctx, {
             borderColor: [
                 'rgba(237, 83, 56, 1)',
                 'rgba(237, 83, 56, 1)',
+                'rgba(237, 83, 56, 1)',
+                'rgba(237, 83, 56, 1)',
+                'rgba(237, 83, 56, 1)',
                 'rgba(237, 83, 56, 1)'
             ],
             borderWidth: 5,
+            lineTension: 0, // Makes the line straight between the dots
             borderCapStyle: 'round',
             // fill: false,
             pointRadius: 5, // This determines the size of the graph point
@@ -61,13 +77,13 @@ var distance = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true // Ensures that the graph starts at 0 and not from lowest data
                 }
             }]
         },
         title: {
             display: true,
-            text: 'Distance in km',
+            text: 'Distance in km (x 1000)',
         },
         legend: {
             display: false
@@ -106,7 +122,7 @@ var resources = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true // Ensures that the graph starts at 0 and not from lowest data
                 }
             }]
         },

@@ -40,18 +40,20 @@ body {
 h1 {
     font-family: "GothamBold", Helvetica, sans-serif;
     color: var(--primary);
-    font-size: 16px;
+    font-size: 22px;
     line-height: 24px;
-    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 p {
     font-family: "GothamLight", Helvetica, sans-serif;
     color: var(--secondary);
-    font-size: 16px;
-    line-height: 24px;
     text-align: center;
 }
+
+
+/* Header */
 
 /* SpaceX logo */
 .logo {
@@ -59,19 +61,24 @@ p {
 	max-height: 35px;
     width: 50%;
     display: block;
+    margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* main */
+
+/* Main */
+
+/* Setting the grid */
 .dashboard {
     display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-row-gap: 15px;
 	grid-auto-rows: auto auto;
-	padding-top: 32px;
+	padding-top: 30px;
 }
 
+/* Applying the grid */
 .data-1, .data-2, .data-3 {
     grid-column: 2 / span 10;
 }
@@ -81,12 +88,24 @@ section {
     border-radius: 10px;
 }
 
-.chart {
-    position: relative;
-    /* width: 45vw; */
-    margin: 10px;
+/* The countdown styles */
+.numbers {
+    color: var(--secondary);
+    font-family: "GothamLight", Helvetica, sans-serif;
+    font-size: 18px;
+  }
+
+.days, .hours, .minutes, .seconds {
+    display: inline-block;
+    color: #86754E;
+    font-family: "GothamBold", Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 5px;
 }
 
-/* canvas {
-    border: 2px solid var(--primary);
-} */
+/* Positioning of the graphs */
+.chart {
+    position: relative;
+    margin: 0 10px 10px 10px;
+}
