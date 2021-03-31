@@ -34,7 +34,7 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "Welcome to Mars";
   }
-}, 250);
+}, 1000);
 
 
 // Sets the font and font color of the charts
