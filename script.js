@@ -1,6 +1,6 @@
 // Script for the countdown clock
 // Set the date to where it counts down to
-var countDownDate = new Date("May 26, 2021 16:43:52").getTime();
+var countDownDate = new Date("May 26, 2023 16:43:52").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
