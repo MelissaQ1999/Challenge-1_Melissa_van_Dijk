@@ -29,7 +29,7 @@ var x = setInterval(function() {
         <div class=\"numbers\">" + seconds + "</div>Seconds</div> \
     </div>";
 
-  // When the countdown is on the date, they shoul have arrived and this text will appear
+  // When the countdown is on the date, they should have arrived and this text will appear
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "Welcome to Mars";
